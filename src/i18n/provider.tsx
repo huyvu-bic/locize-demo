@@ -1,8 +1,8 @@
 'use client'
 
 import i18next from "i18next"
-import { FunctionComponent, PropsWithChildren } from "react"
 import { I18nextProvider } from "react-i18next"
+import { FunctionComponent, PropsWithChildren } from "react"
 
 type I18nProviderProps = PropsWithChildren
 
