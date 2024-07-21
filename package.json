@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "locize:download": "locize download --path ./src/i18n/locales",
+    "locize:migrate": "locize migrate --path ./src/i18n/locales/en --language en"
   },
   "dependencies": {
     "accept-language": "^3.0.18",

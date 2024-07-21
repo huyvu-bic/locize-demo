@@ -1,13 +1,10 @@
 {
-  "social_community_platform": "Social Community Platform",
-  "social_community_platform_text": "Beincom is the platform for building and engaging with communities.",
-
   "always_reach": "Always Reach",
   "always_reach_text": "Contents created by communities are always distributed to all members' newsfeeds.",
-
   "quality_content": "Quality Content",
   "quality_content_text": "Read & Write with quality and earn rewards for each post.",
-
   "security": "Security",
-  "security_text": "Rigorous account verification and security mechanisms using Web3 (Blockchain) technology."
+  "security_text": "Rigorous account verification and security mechanisms using Web3 (Blockchain) technology.",
+  "social_community_platform": "Social Community Platform",
+  "social_community_platform_text": "Beincom is the platform for building and engaging with communities."
 }

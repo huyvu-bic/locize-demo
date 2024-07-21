@@ -1,10 +1,8 @@
 {
-  "sign_up_title": "Sign up for Beincom",
+  "privacy_term": "By signing up, you agree to our <0>Privacy & Terms</0>",
   "sign_up_subtitle": "The future of community engagement",
-
+  "sign_up_title": "Sign up for Beincom",
   "sign_up_with_email": "Sign up with email",
-  "sign_up_with_google": "Sign up with Google",
   "sign_up_with_facebook": "Sign up with Facebook",
-
-  "privacy_term": "By signing up, you agree to our <0>Privacy & Terms</0>"
+  "sign_up_with_google": "Sign up with Google"
 }
