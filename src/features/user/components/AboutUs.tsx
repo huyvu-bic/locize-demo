@@ -1,5 +1,7 @@
-import { useTranslation } from "@/i18n";
+"use client";
+
 import Image from "next/image";
+import { useTranslation } from "@/i18n/client";
 import { FunctionComponent, PropsWithChildren } from "react";
 
 type AboutUsListProps = PropsWithChildren;
@@ -13,10 +15,7 @@ type AboutUsItemProps = {
   title: string;
 };
 
-const AboutUsItem: FunctionComponent<AboutUsItemProps> = async ({
-  text,
-  title,
-}) => {
+const AboutUsItem: FunctionComponent<AboutUsItemProps> = ({ text, title }) => {
   return (
     <li className={`flex flex-row gap-x-6 items-start`}>
       <Image
@@ -38,8 +37,8 @@ const AboutUsItem: FunctionComponent<AboutUsItemProps> = async ({
 
 type AboutUsProps = {};
 
-const AboutUs: FunctionComponent<AboutUsProps> = async () => {
-  const { t } = await useTranslation("user_about_us");
+const AboutUs: FunctionComponent<AboutUsProps> = () => {
+  const { t } = useTranslation("user_about_us");
 
   const containerClassName = `flex flex-col gap-y-6`;
 

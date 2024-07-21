@@ -1,7 +1,5 @@
-import AuthSignUp from "@/features/user/components/auth/AuthSignUp";
-import Greeting from "@/features/user/components/Greeting";
-import { useTranslation } from "@/i18n";
 import { Metadata } from "next";
+import AuthSignUp from "@/features/user/components/auth/AuthSignUp";
 
 type HomePageProps = {};
 
@@ -10,7 +8,5 @@ export const metadata: Metadata = {
 };
 
 export default async function HomePage(props: HomePageProps) {
-  const { t } = await useTranslation("common");
-
   return <AuthSignUp />;
 }

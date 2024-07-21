@@ -1,12 +1,14 @@
-import { useTranslation } from "@/i18n";
+"use client";
+
 import { FunctionComponent } from "react";
-import PersonalInvitation from "@/features/common/components/invitation/PersonalInvitation";
+import { useTranslation } from "@/i18n/client";
 import SignUpMethods from "./_components/SignUpMethods";
+import PersonalInvitation from "@/features/common/components/invitation/PersonalInvitation";
 
 type AuthSignUpProps = {};
 
-const AuthSignUp: FunctionComponent<AuthSignUpProps> = async () => {
-  const { t } = await useTranslation("user_auth");
+const AuthSignUp: FunctionComponent<AuthSignUpProps> = () => {
+  const { t } = useTranslation("user_auth");
 
   return (
     <div className={"bg-white p-12 rounded-md flex flex-col gap-y-6"}>

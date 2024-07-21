@@ -34,15 +34,18 @@ i18next
   });
 
 export function useTranslation(ns: string, options?: any) {
-  const params = useParams<{ lng: string }>()
-  const lng = params.lng ?? fallbackLng
+  const params = useParams<{ lng: string }>();
+  const lng = params.lng ?? fallbackLng;
 
   const [cookies, setCookie] = useCookies([cookieName]);
   const ret = useTranslationOrg(ns, options);
   const { i18n } = ret;
-  
+
   const [activeLng, setActiveLng] = useState(i18n.resolvedLanguage);
 
+  if (runsOnServerSide && lng && i18n.resolvedLanguage !== lng) {
+    i18n.changeLanguage(lng);
+  } else {
     // eslint-disable-next-line react-hooks/rules-of-hooks
     useEffect(() => {
       if (activeLng === i18n.resolvedLanguage) return;
@@ -60,6 +63,7 @@ export function useTranslation(ns: string, options?: any) {
       if (cookies.i18next === lng) return;
       setCookie(cookieName, lng, { path: "/" });
     }, [lng, cookies.i18next, setCookie]);
+  }
 
   return ret;
 }

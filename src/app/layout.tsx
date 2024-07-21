@@ -6,6 +6,7 @@ import { cookieName, fallbackLng, languages } from "@/i18n/settings";
 
 import "./globals.css";
 import { cookies } from "next/headers";
+import LanguageSwitcher from "@/features/common/components/LanguageSwitcher";
 
 type RootLayoutProps = PropsWithChildren<{}>;
 
@@ -20,7 +21,11 @@ export default async function RootLayout({ children }: RootLayoutProps) {
 
   return (
     <html lang={lng} dir={"ltr"}>
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        {children}
+
+        <LanguageSwitcher />
+      </body>
     </html>
   );
 }
