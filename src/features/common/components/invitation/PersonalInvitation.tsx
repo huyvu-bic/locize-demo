@@ -28,7 +28,7 @@ const PersonalSummary: FunctionComponent<PersonalSummaryProps> = ({
 type PersonalInvitationProps = {};
 
 const PersonalInvitation: FunctionComponent<PersonalInvitationProps> = () => {
-  const { t } = useTranslation("common_invitation");
+  const { t } = useTranslation("common_invitation"); // Namespace 
 
   const containerClassName =
     "flex flex-col p-4 items-center rounded-md bg-gray-100 gap-y-2";
